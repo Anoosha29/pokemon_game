@@ -1,0 +1,86 @@
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s;
+        }
+        
+        .game-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pokemon-image {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 1.5rem;
+            display: block;
+            transition: all 0.5s ease;
+            filter: brightness(0) contrast(1.5);
+            object-fit: contain;
+        }
+        
+        .pokemon-image.revealed {
+            filter: none;
+        }
+        
+        .timer-container {
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .timer-bar {
+            height: 100%;
+            background-color: #28a745;
+            width: 100%;
+            transition: width 1s linear;
+        }
+        
+        .attempts-display {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .attempt-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #dc3545;
+        }
+        
+        .attempt-dot.used {
+            background-color: #6c757d;
+        }
+        
+        .hint-display {
+            min-height: 24px;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: #6c757d;
+        }
+        
+        .score-display {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 576px) {
+            .pokemon-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .game-container {
+                padding: 1.5rem;
+            }
+        }
